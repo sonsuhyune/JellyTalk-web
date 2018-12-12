@@ -1,5 +1,4 @@
-1771030�ռ���
-/**
+
  * Copyright 2015 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -26,14 +25,40 @@ main, #messages-card {
   height: calc(100% - 35px);
   padding-bottom: 0;
 }
+/*ë°¤ ë°°ê²½*/
+#messages-card-container-night {
+  padding: 0;
+  margin: 0;
+  background-image:url("https://firebasestorage.googleapis.com/v0/b/friendlychat-web-a6132.appspot.com/o/night.png?alt=media&token=da31233a-2543-46ad-a5e2-ec6e993b07a8");
+  background-repeat: repeat;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+/*ë® ë°°ê²½*/
+#messages-card-container-daytime {
+  padding: 0;
+  margin: 0;
+  background-image:url("https://firebasestorage.googleapis.com/v0/b/friendlychat-web-a6132.appspot.com/o/daytime.png?alt=media&token=74ec09cb-ec02-45d6-8baf-8bb85c9a6603");
+  background-repeat: repeat;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
 #messages-card {
-  margin-top: 15px;
+  margin-top: 10px;
+  margin-left:200px;
 }
 .mdl-layout__header-row span {
   margin-left: 15px;
   margin-top: 17px;
 }
 .mdl-grid {
+  position:initial;
   max-width: 1024px;
   margin: auto;
 }
@@ -62,6 +87,31 @@ main, #messages-card {
 #message-filler {
   flex-grow: 1;
 }
+
+/*ë® ë°°ê²½*/
+/* #message-background-daytime{
+ /* width:455px;
+  height:385px;*/
+/*background-image:url(daytime.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+   }
+*/
+
+/*ë°¤ ë°°ê²½*/
+/* #message-background-night{
+  /* width:455px;
+  height:385px;*/
+/*  background-image:url(night.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+   }
+*/
+
 .message-container:first-of-type {
   border-top-width: 0;
 }
@@ -82,7 +132,9 @@ main, #messages-card {
   width: 30px;
   height: 30px;
   background-size: 30px;
-  border-radius: 20px;
+  border-radius: 50%;
+  position: relative;
+  left: 3px;
 }
 .message-container .spacing {
   display: table-cell;
@@ -91,17 +143,45 @@ main, #messages-card {
 .message-container .message {
   display: table-cell;
   width: calc(100% - 40px);
-  padding: 5px 0 5px 10px;
+  padding: 7px 10px 5px 10px;
+  position: relative;
+  left: 17px;
+  top:1px;
+  background-repeat: no-repeat;
+  background-color:#e0e0e0;
+  border-radius: 10px 10px 10px 0px;
+  color:black;
+  font-size: 12px;
+  font-family: 'Poor Story', cursive;
 }
 .message-container .name {
-  display: inline-block;
-  width: 100%;
-  padding-left: 40px;
+  display: flex;
+  width: 90%;
+  padding-left: 0px;
   color: #bbb;
   font-style: italic;
-  font-size: 12px;
+  font-size: 11px;
   box-sizing: border-box;
+  white-space: pre;
+  position: relative;
+  bottom:10px;
+  left:45px;
+  font-family: 'Poor Story', cursive;
 }
+.message-container .name1{
+  display: inline-block;
+  width: 10%;
+  padding-left: 3px;
+  color: black;
+  font-style: italic;
+  font-size: 11px;
+  box-sizing: border-box;
+  position: relative;
+  top:8px;
+  font-family: 'Poor Story', cursive;
+}
+
+
 #message-form {
   display: flex;
   flex-direction: row;
